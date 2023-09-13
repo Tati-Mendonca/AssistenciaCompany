@@ -1,5 +1,6 @@
 package br.com.fiap.asssistenciaco;
 
+import br.com.fiap.asssistenciaco.entity.Servico;
 import br.com.fiap.asssistenciaco.repository.EquipamentoRepository;
 import br.com.fiap.asssistenciaco.repository.OrdemServicoRepository;
 import br.com.fiap.asssistenciaco.repository.ServicoRepository;
@@ -7,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -36,6 +41,7 @@ public class AsssistenciaCoApplication implements CommandLineRunner {
 
 		resultado.forEach(i -> System.out.println(i.getDescricao() + " - " + i.getValor()));
 	}
+
 
 
 }

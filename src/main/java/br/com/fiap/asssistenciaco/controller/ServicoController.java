@@ -2,11 +2,13 @@ package br.com.fiap.asssistenciaco.controller;
 
 import br.com.fiap.asssistenciaco.entity.Servico;
 import br.com.fiap.asssistenciaco.repository.ServicoRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/servicos")
@@ -31,7 +33,12 @@ public class ServicoController {
     }
 
     @PostMapping
-    public ResponseEntity<Servico> inserir(@RequestBody Servico body){
+    public ResponseEntity<Servico> inserir(@RequestBody @Valid Servico body){
+        var existente = servicoRepository.findByDescricaoIgnoreCase(body.getDescricao());
+        if (!existente.isEmpty()){
+            throw new RuntimeException("Já existe um serviço cadastrado para essa descrição");
+        }
+
         var salvo = servicoRepository.save(body);
         return ResponseEntity.ok(salvo);
     }
@@ -55,10 +62,15 @@ public class ServicoController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity excluir (@PathVariable Integer id){
-        var resultado = servicoRepository.findById(id);
+        Optional<Servico> resultado = servicoRepository.findById(id);
         if (resultado.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
+        var itensExistentes = servicoRepository.findItensServico(id);
+        if(!itensExistentes.isEmpty()){
+            return ResponseEntity.badRequest().build();
+        }
+
         servicoRepository.deleteById(id);
         return  ResponseEntity.ok().build();
     }

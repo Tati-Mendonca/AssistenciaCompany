@@ -1,0 +1,17 @@
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Marcel Marreti Rosa', 'marcel.rosa@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Natan Novak', 'natan.novak@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Karen Moreno Spisso', 'karen.spisso@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Juliana Gomes Proenca', 'juliana.proenca@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Geovanna Carolina Favilla', 'geovanna.favilla@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Douglas Quintiliano Calixto', 'douglas.calixto@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Bruno Pavanelli Couto', 'bruno.couto@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Amanda Gaeta Parigini', 'amanda.parigini@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Adnam Marques Batista Junior', 'adnam.junior@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Alexandre Claret Albertos', 'alexandre.albertos@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Frederico Ribeiro Vilela Santeiro', 'frederico.santeiro@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Gabriel Biscaro Cavallari', 'gabriel.cavallari@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Gabriel Ferreira Monteiro', 'gabriel.monteiro@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Giorgia Soares Agostini', 'giorgia.agostini@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Lais Manesco Grigolon', 'lais.grigolon@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Leticia Consoline', 'leticia.consoline@assistenciacompany.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME, TX_EMAIL) VALUES ('Lucas Alexandre Soares', 'lucas.soares@assistenciacompany.com.br');

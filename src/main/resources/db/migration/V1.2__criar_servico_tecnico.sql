@@ -28,8 +28,8 @@ CREATE TABLE TBL_TECNICO
     TX_EMAIL     VARCHAR(50)
 );
 
-INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Rafaela Buainain Luiz','rafa.luiz@assistenciaco.com.br');
-INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Diogo Castro Lopes','diogo.lopes@assistenciaco.com.br');
-INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Felipe Kenji Yoshida','felipe.yoshida@assistenciaco.com.br');
-INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Maria Luiza De Sa Barros','maria.barros@assistenciaco.com.br');
-INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Thiago Costa Torres','thiago.torres@assistenciaco.com.br');
+INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Rafaela Buainain Luiz','rafa.luiz@assistenciacompany.com');
+INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Diogo Castro Lopes','diogo.lopes@assistenciacompany.com');
+INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Felipe Kenji Yoshida','felipe.yoshida@assistenciacompany.com');
+INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Maria Luiza De Sa Barros','maria.barros@assistenciacompany.com');
+INSERT INTO TBL_TECNICO(TX_NOME,TX_EMAIL) VALUES ('Thiago Costa Torres','thiago.torres@assistenciacompany.com');

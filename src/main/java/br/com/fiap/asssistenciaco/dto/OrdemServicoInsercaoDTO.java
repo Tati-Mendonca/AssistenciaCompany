@@ -1,5 +1,6 @@
 package br.com.fiap.asssistenciaco.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -28,14 +29,16 @@ public class OrdemServicoInsercaoDTO {
 
     private String observacoes;
 
+    @JsonIgnore
     public LocalDateTime getDataEntrada() {
         return Objects.isNull(entrada) ? null
-                                       : entrada.atStartOfDay();
+                : entrada.atStartOfDay();
     }
 
+    @JsonIgnore
     public LocalDateTime getDataPrevisao() {
         return Objects.isNull(previsao) ? null
-                                        : previsao.atStartOfDay();
+                : previsao.atStartOfDay();
     }
 
 }

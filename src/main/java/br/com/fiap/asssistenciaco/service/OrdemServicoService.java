@@ -41,7 +41,9 @@ public class OrdemServicoService {
     @Autowired
     private ObservacaoRepository observacaoRepository;
 
+
     private ModelMapper mapper = new ModelMapper();
+
 
 
     public OrdemServicoResponseDTO inserir(OrdemServicoInsercaoDTO request) {
@@ -61,11 +63,12 @@ public class OrdemServicoService {
         entity.setPrioridade(PrioridadeExecucaoEnum.BAIXA);
         osRepository.save(entity);
 
+
         if (StringUtils.isNotBlank(request.getObservacoes())) {
             var observacao = Observacao.builder().ordemServico(entity)
-                                                 .texto(request.getObservacoes())
-                                                 .data(entity.getDataEntrada())
-                                       .build();
+                    .texto(request.getObservacoes())
+                    .data(entity.getDataEntrada())
+                    .build();
             observacaoRepository.save(observacao);
         }
 
@@ -78,14 +81,14 @@ public class OrdemServicoService {
             return Optional.empty();
         }
         var dto = mapper.map(resultado.get(), OrdemServicoResponseDTO.class);
-        var observaoes = osRepository.findObservacoes(id).stream()
+        var observacoes = osRepository.findObservacoes(id).stream()
                                                          .map(Observacao::getTexto)
                                                          .collect(Collectors.joining(" | "));
-        dto.setObservacoes(observaoes);
+        dto.setObservacoes(observacoes);
         return Optional.of(dto);
     }
 
-    public List<OrdemServicoResponseDTO> listarTodos() {
+    public List<OrdemServicoResponseDTO> listarTodos() { //método listar todos
         var resultado = osRepository.findAll();
         return resultado.stream().map(e -> mapper.map(e, OrdemServicoResponseDTO.class)).toList();
     }

@@ -6,7 +6,7 @@ public enum TipoEquipamentoEnum {
 
     TABLET,
 
-    OUTROS_ELETRONICOS,
+    OUTROS,
 
     NOTEBOOK,
 

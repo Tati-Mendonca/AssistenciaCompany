@@ -17,6 +17,7 @@ public interface OrdemServicoRepository extends JpaRepository<OrdemServico, Inte
            "where os.prioridade = br.com.fiap.asssistenciaco.enums.PrioridadeExecucaoEnum.CRITICA")
     List<OrdemServico> findCriticas();
 
+
     @Query("select count(os) from OrdemServico os " +
            "where os.status = br.com.fiap.asssistenciaco.enums.StatusExecucaoEnum.CONCLUIDO")
     Long countConcluidas();

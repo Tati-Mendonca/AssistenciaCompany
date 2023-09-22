@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.fiap</groupId>
-	<artifactId>asssistencia-co</artifactId>
+	<artifactId>assistencia-co</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>asssistencia-co</name>
 	<description>Demo project for Spring Boot</description>

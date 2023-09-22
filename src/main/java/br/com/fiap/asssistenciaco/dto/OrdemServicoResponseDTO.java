@@ -14,7 +14,7 @@ import java.util.Objects;
 @Setter
 public class OrdemServicoResponseDTO {
 
-    private Integer id;
+    private Long id;
     private EquipamentoResponseDTO equipamento;
     private ClienteResponseDTO cliente;
 
@@ -32,12 +32,12 @@ public class OrdemServicoResponseDTO {
 
     public LocalDate getEntrada() {
         return Objects.isNull(dataEntrada) ? null
-                                           : dataEntrada.toLocalDate();
+                : dataEntrada.toLocalDate();
     }
 
     public LocalDate getPrevisao() {
         return Objects.isNull(dataPrevisao) ? null
-                                            : dataPrevisao.toLocalDate();
+                : dataPrevisao.toLocalDate();
     }
 
 }

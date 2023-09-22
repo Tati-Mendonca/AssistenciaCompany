@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AsssistenciaCoApplication  {
+public class AssistenciaCoApplication  {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AsssistenciaCoApplication.class, args);
+		SpringApplication.run(AssistenciaCoApplication.class, args);
 	}
 
 }

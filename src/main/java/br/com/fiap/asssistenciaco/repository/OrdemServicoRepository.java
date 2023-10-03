@@ -3,13 +3,14 @@ package br.com.fiap.asssistenciaco.repository;
 import br.com.fiap.asssistenciaco.entity.Observacao;
 import br.com.fiap.asssistenciaco.entity.OrdemServico;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public interface OrdemServicoRepository extends JpaRepository<OrdemServico, Integer> {
+public interface OrdemServicoRepository extends JpaRepository<OrdemServico, Integer>, JpaSpecificationExecutor<OrdemServico> {
 
     List<OrdemServico> findByDataEntradaBetween(LocalDateTime dataInicio, LocalDateTime dataFim);
 

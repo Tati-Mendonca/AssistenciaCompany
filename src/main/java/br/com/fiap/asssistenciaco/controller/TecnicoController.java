@@ -8,7 +8,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,7 +37,11 @@ public class TecnicoController {
         }
 
         return tecnicoRepository.findByEmail(email, pageRequest);
+
     }
+
+
+
 
     @GetMapping("/{id}")
     @Operation(summary = "Consulta por ID", description = "Realiza consulta de tecnicos por ID ")

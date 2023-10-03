@@ -29,6 +29,7 @@ public class OrdemServicoInsercaoDTO {
 
     private String observacoes;
 
+
     @JsonIgnore
     public LocalDateTime getDataEntrada() {
         return Objects.isNull(entrada) ? null

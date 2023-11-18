@@ -1,5 +1,6 @@
 package br.com.fiap.asssistenciaco.dto;
 
+import br.com.fiap.asssistenciaco.entity.Telefone;
 import br.com.fiap.asssistenciaco.enums.PrioridadeExecucaoEnum;
 import br.com.fiap.asssistenciaco.enums.StatusExecucaoEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -23,6 +24,10 @@ public class OrdemServicoResponseDTO {
 
     @JsonIgnore
     private LocalDateTime dataPrevisao;
+
+    private String documento;
+
+    private Telefone telefone;
 
     private String defeito;
     private PrioridadeExecucaoEnum prioridade;

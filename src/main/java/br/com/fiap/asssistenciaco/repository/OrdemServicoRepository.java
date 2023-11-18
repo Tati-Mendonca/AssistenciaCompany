@@ -2,6 +2,9 @@ package br.com.fiap.asssistenciaco.repository;
 
 import br.com.fiap.asssistenciaco.entity.Observacao;
 import br.com.fiap.asssistenciaco.entity.OrdemServico;
+import br.com.fiap.asssistenciaco.entity.Tecnico;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;

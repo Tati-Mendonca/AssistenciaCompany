@@ -3,10 +3,7 @@ package br.com.fiap.asssistenciaco.service;
 import br.com.fiap.asssistenciaco.dto.FiltroOSDTO;
 import br.com.fiap.asssistenciaco.dto.OrdemServicoInsercaoDTO;
 import br.com.fiap.asssistenciaco.dto.OrdemServicoResponseDTO;
-import br.com.fiap.asssistenciaco.entity.Cliente;
-import br.com.fiap.asssistenciaco.entity.Equipamento;
-import br.com.fiap.asssistenciaco.entity.Observacao;
-import br.com.fiap.asssistenciaco.entity.OrdemServico;
+import br.com.fiap.asssistenciaco.entity.*;
 import br.com.fiap.asssistenciaco.enums.PrioridadeExecucaoEnum;
 import br.com.fiap.asssistenciaco.enums.StatusExecucaoEnum;
 import br.com.fiap.asssistenciaco.enums.TipoDocumentoEnum;
@@ -51,6 +48,11 @@ public class OrdemServicoService {
     public OrdemServicoResponseDTO inserir(OrdemServicoInsercaoDTO request) {
         var cliente = Cliente.builder().tipoDocumento(TipoDocumentoEnum.CPF)
                                        .nome(request.getCliente())
+                                        .documento(request.getDocumento())
+                                        .telefone(request.getTelefone())
+
+                                        //.telefone(request.getTelefone())
+
                              .build();
         clienteRepository.save(cliente);
 
@@ -61,7 +63,6 @@ public class OrdemServicoService {
         var entity = mapper.map(request, OrdemServico.class);
         entity.setCliente(cliente);
         entity.setEquipamento(equipamento);
-//        entity.setDocumento(texto);
         entity.setStatus(StatusExecucaoEnum.ABERTO);
         entity.setPrioridade(PrioridadeExecucaoEnum.BAIXA);
         osRepository.save(entity);

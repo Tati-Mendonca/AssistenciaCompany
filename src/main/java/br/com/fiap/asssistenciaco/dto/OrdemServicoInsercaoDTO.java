@@ -1,5 +1,6 @@
 package br.com.fiap.asssistenciaco.dto;
 
+import br.com.fiap.asssistenciaco.entity.Telefone;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
@@ -26,6 +27,11 @@ public class OrdemServicoInsercaoDTO {
 
     @NotBlank(message = "Defeito é obrigatório")
     private String defeito;
+
+    @NotBlank(message = "Documento é obrigatório")
+    private String documento;
+
+    private Telefone telefone;
 
     private String observacoes;
 

@@ -1,5 +1,6 @@
 package br.com.fiap.asssistenciaco.controller;
 
+
 import br.com.fiap.asssistenciaco.dto.FiltroOSDTO;
 import br.com.fiap.asssistenciaco.dto.OrdemServicoInsercaoDTO;
 import br.com.fiap.asssistenciaco.dto.OrdemServicoResponseDTO;
@@ -15,12 +16,11 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/ordem-servico")
 @CrossOrigin(origins = "*", maxAge = 3600)
 @Tag(name = "/ordem-servico", description = "Gerência as ordens de serviços")
-public class OrdemServicoController {
+public class OrdemServicosController {
 
     @Autowired
     private OrdemServicoService osService;
@@ -33,7 +33,11 @@ public class OrdemServicoController {
                                                      @RequestParam(required = false) String nome,
                                                      @RequestParam(required = false) String modelo,
                                                      @RequestParam(required = false) LocalDate dataInicio,
-                                                     @RequestParam(required = false) LocalDate dataFim) {
+                                                     @RequestParam(required = false) LocalDate dataFim
+
+    ) {
+
+
         var filtro = FiltroOSDTO.builder().documento(documento)
                     .nome(nome)
                     .modelo(modelo)

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.fiap</groupId>
-	<artifactId>assistencia-co</artifactId>
+	<artifactId>asssistencia-co</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>asssistencia-co</name>
 	<description>Demo project for Spring Boot</description>
@@ -41,6 +41,7 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
@@ -74,6 +75,22 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
+			<pluginManagement>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.10.1</version>
+						<configuration>
+							<compilerArgs>
+								<arg>-parameters</arg>
+							</compilerArgs>
+						</configuration>
+					</plugin>
+				</plugins>
+			</pluginManagement>
+
 	</build>
+
 
 </project>

@@ -1,5 +1,7 @@
 package br.com.fiap.asssistenciaco.config;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -11,6 +13,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
+@OpenAPIDefinition(info=@Info(title="Swagger Assistência - V1"))
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
